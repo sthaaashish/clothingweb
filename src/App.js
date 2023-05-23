@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
+import Footer from './components/footer/Footer'
+import Home from './components/Home/Home';
+import Navbar from './components/Navbar/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Mens from './components/Mens/Mens';
+import Womens from './components/Womens/Womens';
+import Accessories from './components/Accessories/Accessories';
+import PrivacyPolicy from './components/footer/PrivacyPolicy';
+import ReturnandExchange from './components/footer/ReturnandExchange';
+
+
 
 function App() {
+  const [cartCount, setCartCount] =useState(0);
+
+  const handleAddToCart = () => {
+    setCartCount(cartCount + 1);
+    alert("added to cart")
+  };
+
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar  count={cartCount}/>
+      <Routes>
+        <Route path='' element={<Home/>}/>
+        <Route path='/home' element={<Home/>}/>
+        <Route path='/mens' element={<Mens onAddToCart={handleAddToCart}/>}/>
+          <Route path='/womens' element={<Womens onAddToCart={handleAddToCart}/>}/>
+        <Route path='/accessories' element={<Accessories onAddToCart={handleAddToCart}/>}/>
+        <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
+      <Route path='/return-exchange-policy' element={<ReturnandExchange/>}/>
+     </Routes>
+    <Footer/>
     </div>
+    </Router>
   );
 }
 
