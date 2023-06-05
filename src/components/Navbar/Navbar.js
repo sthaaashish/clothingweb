@@ -1,86 +1,140 @@
-import React, { useState } from 'react'
-import AppBar from '@mui/material/AppBar';
-import { Container } from '@mui/system';
-import { Avatar, Badge, Box, IconButton, MenuItem, Stack, Tab, Tabs, Tooltip, Typography} from '@mui/material';
-import aa from './images/aa.png'
-import Menu from '@mui/material/Menu';
-import bitmap from './images/bitmap.png'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import MailIcon from '@mui/icons-material/Mail';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import AppBar from "@mui/material/AppBar";
+import {
+  Avatar,
+  Badge,
+  Box,
+  IconButton,
+  MenuItem,
+  Tab,
+  Tabs,
+  Tooltip,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import aa from "./images/aa.png";
+import Menu from "@mui/material/Menu";
+import bitmap from "./images/bitmap.png";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import MailIcon from "@mui/icons-material/Mail";
+import { Link } from "react-router-dom";
+import Sidebar from "./Sidebar";
 
+const Pages = ["Home", "Mens", "Womens", "Accessories"];
+const userMenu = ["Profile", "Dashboard", "Account", "Logout"];
 
-const Pages=["Home", "Mens", "Womens", "Accessories"]
-const settings=["Profile", "Dashboard","Account","Logout"]
+export default function Navbar({ count }) {
+  const [profileMenu, setProfileMenu] = useState(null);
 
-export default function Navbar({count}) {
-    
-    const [setting, setSetting]=useState(null);
-    
-
-    const handleOpenSetting =(event)=>{
-        setSetting(event.currentTarget)
-    }
-    const handleCloseSetting=()=>{
-        setSetting(null)
-    }
-  
+  const handleOpenprofileMenu = (event) => {
+    setProfileMenu(event.currentTarget);
+  };
+  const handleCloseprofileMenu = () => {
+    setProfileMenu(null);
+  };
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+ 
   return (
-    <div>
-<AppBar position='static' sx={{backgroundColor:'#00796b', height:70}}>
-      <Container maxWidth="xl" >
-        <Box sx={{width:'100px', float:'left'}}>
-            <Link to="/home" style={{textDecoration:'none'}}>
-            <img src={bitmap} alt="cc" height="100px" width="150px" />  
+    <>
+      <AppBar
+        position="static"
+        sx={{
+          backgroundColor: "#00796b",
+          height: 70,
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "flex-start",
+        }}
+      >
+        {!isMatch && (
+          <Box>
+            <Link to="/home">
+              <img src={bitmap} alt="cc" height="100px" width="150px" />
             </Link>
-        </Box>
-        <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}} >
-        <Tabs sx={{ marginLeft: 6 ,}}>
+          </Box>
+        )}
+
+        {/* ---Drawer--- */}
+
+        {isMatch ? (
+          <>
+            <Box sx={{ mt: 3 }}>
+              <Sidebar />
+            </Box>
+            <Box sx={{ justifyContent: "center", ml: 7 }}>
+              <Link to="/home" style={{ textDecoration: "none" }}>
+                <img src={bitmap} alt="cc" height="100px" width="150px" />
+              </Link>
+            </Box>
+          </>
+        ) : (
+          <>
+          {/* -----PAGES---- */}
+            <Box sx={{ mt: 3 }}>
               {Pages.map((page, index) => (
-                <Link key={index} to={`/${page}`} style={{color:'inherit', textDecoration: 'none' }}>
-                  <Tab style={{ color:'inherit' }} label={page} />
+                <Link
+                  key={index}
+                  to={`/${page}`}
+                  style={{ color: "#ffff", textDecoration: "none" }}
+                >
+                  <Tab style={{ color: "#ffff" }} label={page} />
                 </Link>
               ))}
-            </Tabs>
-        
-          <Stack spacing={2} direction="row" sx={{marginLeft:'50%'}}>
-         <IconButton color="inherit">
-         <Badge  color='warning'  badgeContent={count}>
-            <ShoppingCartIcon />
+            </Box>
+          </>
+        )}
+          {/* ---------ICONS-------- */}
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            right: 0,
+            p: 1,
+            mt: 2,
+          }}
+        >
+          <IconButton color="inherit">
+            <Badge color="warning" badgeContent={count}>
+              <ShoppingCartIcon />
             </Badge>
-         </IconButton>
-            
-          
-         <IconButton color='inherit'>
-            <Badge badgeContent="0" color='warning'>
-            <MailIcon/>
+          </IconButton>
+
+          <IconButton color="inherit">
+            <Badge badgeContent="0" color="warning" className="mailicon">
+              <MailIcon />
             </Badge>
+          </IconButton>
+          <Tooltip>
+            <IconButton onClick={handleOpenprofileMenu}>
+              <Avatar
+                src={aa}
+                alt="aa"
+                sx={{
+                  width: 32,
+                  height: 32,
+                  borderRadius: "50%",
+                  border: "1px solid white",
+                }}
+              />
             </IconButton>
-          </Stack>
-          <Box sx={{float:'right', marginTop:'29px'}} >
-            <Tooltip>
-              <IconButton onClick={handleOpenSetting} sx={{p:0, marginBottom:5}}>
-                <Avatar src={aa} alt="aa" sx={{width:32, height:32, borderRadius:"50%" ,border: '1px solid white'}}/>
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{mt:"40px"}}
-              anchorEl={setting}
-              onClose={handleCloseSetting}
-              anchorOrigin={{vertical:'top', horizontal:'right'}}
-              open={Boolean(setting)}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseSetting}>
-                  <Typography textAlign={"center"}>{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+          </Tooltip>
+          <Menu
+            sx={{ mt: "40px" }}
+            anchorEl={profileMenu}
+            onClose={handleCloseprofileMenu}
+            anchorOrigin={{ vertical: "top", horizontal: "right" }}
+            open={Boolean(profileMenu)}
+          >
+            {userMenu.map((Menu) => (
+              <MenuItem key={Menu} onClick={handleCloseprofileMenu}>
+                <Typography textAlign={"center"}>{Menu}</Typography>
+              </MenuItem>
+            ))}
+          </Menu>
         </Box>
-      </Container>
-    </AppBar>
-  </div>
-  
-  )
+      </AppBar>
+    </>
+  );
 }

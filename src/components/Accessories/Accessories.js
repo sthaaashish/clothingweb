@@ -64,7 +64,7 @@ export default function Accessories({onAddToCart}) {
                 {acceCards}
             </Grid>
             <Stack spacing={2}>
-                <Pagination count={totalPages} page={page} onChange={(event,page) =>setPage(page)} sx={{display:'flex',justifyContent:'center',mt:1,color:'primary'}}/>
+                <Pagination count={totalPages} page={page} onChange={(page) =>setPage(page)} sx={{display:'flex',justifyContent:'center',mt:1,color:'primary'}}/>
             </Stack>  
         </Box>
     );

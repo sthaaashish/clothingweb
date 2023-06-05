@@ -22,7 +22,7 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
+    <>
       <Navbar  count={cartCount}/>
       <Routes>
         <Route path='' element={<Home/>}/>
@@ -34,7 +34,7 @@ function App() {
       <Route path='/return-exchange-policy' element={<ReturnandExchange/>}/>
      </Routes>
     <Footer/>
-    </div>
+    </>
     </Router>
   );
 }
