@@ -59,14 +59,14 @@ export default function Womens({onAddToCart}) {
     
     return (
         <Box width="95%" sx={{ml:2}}>
-            <Box display='flex' justifyContent="center">
+            <Box sx={{display:{xs:'block', md:'flex'}, justifyContent:"center"}}>
                 {womensCategories.map(category => (
-                    <Button key={category} sx={{ ml: 2, mt: 3 }} variant="contained" onClick={() => handleCategoryChange(category)}>
+                    <Button key={category} sx={{ ml: 1, mt: 2 }} variant="contained" onClick={() => handleCategoryChange(category)}>
                         {category}
                     </Button>
                 ))}
             </Box>
-            <Typography variant='h5' gutterBottom color="Highlight" >{womens}</Typography>
+            <Typography variant='h5' sx={{textAlign:'center', m:1, color:'Highlight'}} >{womens}</Typography>
             <Grid container spacing={2}>
                 {womensCards}
             </Grid>

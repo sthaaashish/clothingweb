@@ -7,7 +7,6 @@ import {
   IconButton,
   MenuItem,
   Tab,
-  Tabs,
   Tooltip,
   Typography,
   useMediaQuery,
@@ -15,7 +14,7 @@ import {
 } from "@mui/material";
 import aa from "./images/aa.png";
 import Menu from "@mui/material/Menu";
-import bitmap from "./images/bitmap.png";
+import logo from "./images/logo.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MailIcon from "@mui/icons-material/Mail";
 import { Link } from "react-router-dom";
@@ -51,7 +50,7 @@ export default function Navbar({ count }) {
         {!isMatch && (
           <Box>
             <Link to="/home">
-              <img src={bitmap} alt="cc" height="100px" width="150px" />
+              <img src={logo} alt="cc" height="100px" width="150px" />
             </Link>
           </Box>
         )}
@@ -65,7 +64,7 @@ export default function Navbar({ count }) {
             </Box>
             <Box sx={{ justifyContent: "center", ml: 7 }}>
               <Link to="/home" style={{ textDecoration: "none" }}>
-                <img src={bitmap} alt="cc" height="100px" width="150px" />
+                <img src={logo} alt="cc" height="100px" width="150px" />
               </Link>
             </Box>
           </>

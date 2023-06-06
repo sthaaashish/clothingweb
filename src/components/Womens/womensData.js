@@ -139,8 +139,8 @@ const womensData = [
       },
       {
         id: 17,
-        title:'Queen Tee-black',
-        image: 'https://cdn.shopify.com/s/files/1/0293/9277/products/02-15-22Studo2_DD_AC_11-32-21_25_FNWP001QUEEN_Black_1481_PB_360x.jpg?v=1645058192',
+        title:'printed Tee',
+        image: 'https://cdn.shopify.com/s/files/1/0293/9277/files/05-25-23_TA_BD_10-32-39_7_23014928_Aqua_0227_CM_360x.jpg?v=1685574761',
         price: 'Rs 1900',
         rating: 3,
         category:'Tshirts and Tops'
@@ -163,8 +163,8 @@ const womensData = [
       },
       {
         id: 20,
-        title:'Go Figure Pleated skirt',
-        image: 'https://cdn.shopify.com/s/files/1/0293/9277/products/01-11-23Studio3_KF_IM_11-14-13_20_A2116S_Khaki_P_3237_EH_360x.jpg?v=1674085604',
+        title:'Cargo  Mini skirt',
+        image: 'https://cdn.shopify.com/s/files/1/0293/9277/files/05-03-23Studio2_KJ_RL_15-10-43_39_K1222_Grey_11820_DQ_360x.jpg?v=1683659449',
         price: 'Rs 4300',
         rating: 4,
         category:'Skirts'
@@ -195,8 +195,8 @@ const womensData = [
       },
       {
         id: 24,
-        title:'Go Figure Pleated skirt',
-        image: 'https://cdn.shopify.com/s/files/1/0293/9277/products/01-11-23Studio3_KF_IM_11-14-13_20_A2116S_Khaki_P_3237_EH_360x.jpg?v=1674085604',
+        title:'Cargo  Mini skirt',
+        image: 'https://cdn.shopify.com/s/files/1/0293/9277/files/05-03-23Studio2_KJ_RL_15-10-43_39_K1222_Grey_11820_DQ_360x.jpg?v=1683659449',
         price: 'Rs 4300',
         rating: 4,
         category:'Skirts'
@@ -227,8 +227,8 @@ const womensData = [
       },
       {
         id: 28,
-        title:'Go Figure Pleated skirt',
-        image: 'https://cdn.shopify.com/s/files/1/0293/9277/products/01-11-23Studio3_KF_IM_11-14-13_20_A2116S_Khaki_P_3237_EH_360x.jpg?v=1674085604',
+        title:'Cargo  Mini skirt',
+        image: 'https://cdn.shopify.com/s/files/1/0293/9277/files/05-03-23Studio2_KJ_RL_15-10-43_39_K1222_Grey_11820_DQ_360x.jpg?v=1683659449',
         price: 'Rs 4300',
         rating: 4,
         category:'Skirts'
@@ -314,6 +314,14 @@ const womensData = [
         price: 'Rs 5300',
         rating: 4,
         category:'Shoes'
+      },
+      {
+        id: 40,
+        title:'Skinny Jeans',
+        image: 'https://cdn.shopify.com/s/files/1/0293/9277/products/09-15-22Studio2_CE_RL_11-01-03_5_FN22804FT27_LightWash_P_0827_ES_360x.jpg?v=1663287884',
+        price: 'Rs 2300',
+        rating: 3,
+        category:'Jeans'
       },
 
   ];

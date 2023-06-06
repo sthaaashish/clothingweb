@@ -312,6 +312,92 @@ const mensData =[
             Rating:5,
             category:'Shirts and Blazers'
         },
+        {
+            id:41,
+            title:'Faux Suede boots',
+            price:'Rs 5000',
+            image:'https://cdn.shopify.com/s/files/1/0293/9277/products/09-16-22Studio4_ME_RL_10-04-09_14_FNFF08M_Grey_16223_KS_360x.jpg?v=1663351193',
+            Rating:5,
+            category:'Shoes'
+        },
+      {
+            id:42,
+            title:'Black shoes',
+            price:'Rs 3000',
+            image:'https://cdn.shopify.com/s/files/1/0293/9277/products/03-13-23Studio10_CB_13-24-28_38_LH0272_Black_4271_MP_468x.jpg?v=1679089787',
+            Rating:4,
+            category:'Shoes'
+        }, {
+            id:43,
+            title:'classic sneakers',
+            price:'Rs 3000',
+            image:'https://cdn.shopify.com/s/files/1/0293/9277/products/10-27-22Studio1_KJ_DJ_15-48-21_84_7246FN_Green_1076_ES_468x.jpg?v=1666973718',
+            Rating:3,
+            category:'Shoes'
+        }, {
+            id:44,
+            title:'Gray boots',
+            price:'Rs 5000',
+            image:'https://cdn.shopify.com/s/files/1/0293/9277/products/09-16-22Studio4_ME_RL_09-53-56_10_XRW2560_Grey_16197_KS_360x.jpg?v=1663350104',
+            Rating:5,
+            category:'Shoes'
+        },
+        {
+            id:45,
+            title:'Faux Suede boots',
+            price:'Rs 5000',
+            image:'https://cdn.shopify.com/s/files/1/0293/9277/products/09-16-22Studio4_ME_RL_10-04-09_14_FNFF08M_Grey_16223_KS_360x.jpg?v=1663351193',
+            Rating:5,
+            category:'Shoes'
+        },
+        {
+            id:46,
+            title:'Puffer jacket',
+            price:'Rs 4000',
+            image:'https://cdn.shopify.com/s/files/1/0293/9277/products/10-03-22Studio1_RT_DJ_15-53-51_86_1OUTJACK205_Tan_7189_JB_360x.jpg?v=1664839522',
+            Rating:4,
+            category:'Jackets and Sweaters'
+        },
+        {
+            id:47,
+            title:'Brown Jacket',
+            price:'Rs 4000',
+            image:'https://cdn.shopify.com/s/files/1/0293/9277/products/10-12-22Studio5_RT_DJ_11-48-48_48_NHFJ3206B_Browncombo_P_0127_JB_360x.jpg?v=1665679337',
+            Rating:4,
+            category:'Jackets and Sweaters'
+        },
+        {
+            id:48,
+            title:'Sweater',
+            price:'Rs 1000',
+            image:'https://cdn.shopify.com/s/files/1/0293/9277/products/06-07-22Studio3_KJ_RL_10-55-36_45_FNMM601_Burgundy_0708_PB_360x.jpg?v=1654713581',
+            Rating:3,
+            category:'Jackets and Sweaters'
+        },
+{
+        id:49,
+        title:'Puffer jacket',
+        price:'Rs 4000',
+        image:'https://cdn.shopify.com/s/files/1/0293/9277/products/10-03-22Studio1_RT_DJ_15-53-51_86_1OUTJACK205_Tan_7189_JB_360x.jpg?v=1664839522',
+        Rating:4,
+        category:'Jackets and Sweaters'
+    },
+    {
+        id:50,
+        title:'Brown Jacket',
+        price:'Rs 4000',
+        image:'https://cdn.shopify.com/s/files/1/0293/9277/products/10-12-22Studio5_RT_DJ_11-48-48_48_NHFJ3206B_Browncombo_P_0127_JB_360x.jpg?v=1665679337',
+        Rating:4,
+        category:'Jackets and Sweaters'
+    },
+    {
+        id:51,
+        title:'Sweater',
+        price:'Rs 1000',
+        image:'https://cdn.shopify.com/s/files/1/0293/9277/products/06-07-22Studio3_KJ_RL_10-55-36_45_FNMM601_Burgundy_0708_PB_360x.jpg?v=1654713581',
+        Rating:3,
+        category:'Jackets and Sweaters'
+    }
 
 ]
 export default mensData;

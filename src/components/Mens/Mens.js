@@ -24,8 +24,6 @@ export default function Mens({onAddToCart}) {
     setMens(category);
     setpage(1);
   }
-  const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
   const cards = mensFilteredCards.map(mens => (
     <Grid item xs={12} sm={6} md={3} key={mens.id}>
@@ -55,14 +53,17 @@ export default function Mens({onAddToCart}) {
   return (
     <Box width="95%" sx={{ ml: 2 }}>
      
-      <Box sx={{display:'flex', flexDirection:'row'}}>
+      <Box 
+      sx={{ display:{md:'flex', xs:'block'}, justifyContent:'center'}}>
         {mensCategory.map(categories => (
-          <Button sx={{ ml: 2, mt: 3, }} key={categories} variant="contained" onClick={() => handleCategoryChange(categories)}>
+          <Button sx={{ ml: 2, mt:2 }} 
+          key={categories} 
+          variant="contained" onClick={() => handleCategoryChange(categories)}>
             {categories}
           </Button>
         ))}
       </Box>
-      <Typography variant='h5' gutterBottom color="Highlight" >{mens}</Typography>
+      <Typography variant='h5'sx={{textAlign:'center', margin:1, }} color="Highlight" >{mens}</Typography>
       <Grid container spacing={2}>
         {cards}
       </Grid>

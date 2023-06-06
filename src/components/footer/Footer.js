@@ -5,12 +5,12 @@ import React from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { BrowserRouter as Router, Routes, Route, Link as RouterLink, } from 'react-router-dom';
+import { BrowserRouter as  Route, Link as RouterLink, } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <Box sx={{backgroundColor: '#00796b', mt:3, color: '#ffff', display:'flex', justifyContent:'space-between'}}>
-      <Box sx={{ textAlign: 'left', mt:3, marginLeft: 3}}>
+    <Box sx={{backgroundColor: '#00796b', mt:3, color: '#ffff',p:2, display:{xs:'block',md:'flex'}, justifyContent:'space-between'}}>
+      <Box sx={{ textAlign: 'left'}}>
         <Typography variant='h5'>Shrestha Fashion</Typography>
         <Typography>Kathmandu, Nepal</Typography>
         <Typography>Contact: 9745221132, 981801929</Typography>
@@ -40,18 +40,16 @@ export default function Footer() {
         <IconButton color='inherit'> <InstagramIcon /></IconButton>
         <IconButton color='inherit'> <TwitterIcon /></IconButton>   
       </Box>
-  <form>
-      <Box sx={{display: 'flex', justifyContent: 'flex-end', mt:3, mb:4}}>
-        <Stack spacing={2} sx={{display: 'flex', flexDirection: 'column', marginRight: 3}}>
+
+      <Box sx={{ justifyContent: 'flex-end', mt:3, mb:4, width:350}}>
+        <Stack spacing={2} sx={{display: 'flex', marginRight: 3}}>
           <Typography variant='h5'>Feedback form</Typography>
-          <TextField color='primary' label="Enter your Name" variant='filled'/>
-          <TextField color='primary' label="Enter your Email" type="email" variant='filled'/>
-          <TextField  color='primary' label="Enter your message" variant='filled' />
-          <Button variant='filled' type='submit'  color='success'>Submit</Button>
+          <TextField color='warning' label="Enter your Name" variant='filled'/>
+          <TextField color='warning' label="Enter your Email" type="email" variant='filled'/>
+          <TextField  color='warning' label="Enter your message" variant='filled' />
+          <Button variant='contained' type='submit'  color='primary'>Submit</Button>
         </Stack>
       </Box>
-      </form>
-   
-    </Box>
+</Box>
   )
 }

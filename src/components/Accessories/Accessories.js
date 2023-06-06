@@ -14,13 +14,11 @@ export default function Accessories({onAddToCart}) {
     const currentCards =accessoriesData.slice(firstIndex, lastIndex);
     const totalPages = Math.ceil(accessoriesData.length / cardsPerPage)
 
-  
+    const handlePageChange =(event, newPage) =>{
+        setPage(newPage);
+    }
 
-    // const handleCategoryChange = (category) => {
-    //     setWomens(category);
-    //     setPage(1);
-    // }
-    
+  
     const acceCards = currentCards.map(
         accessories => (
             <Grid item xs={12} sm={6} md={3} key={accessories.id} sx={{mt:4}}>
@@ -52,21 +50,19 @@ export default function Accessories({onAddToCart}) {
     
     return (
         <Box width="95%" sx={{ml:2}}>
-            {/* <Box display='flex' justifyContent="center">
-                {womensCategories.map(category => (
-                    <Button key={category} sx={{ ml: 2, mt: 3 }} variant="contained" onClick={() => handleCategoryChange(category)}>
-                        {category}
-                    </Button>
-                ))}
-            </Box> */}
-            {/* <Typography variant='h5' gutterBottom color="Highlight" >{womens}</Typography> */}
             <Grid container spacing={2}>
                 {acceCards}
             </Grid>
             <Stack spacing={2}>
-                <Pagination count={totalPages} page={page} onChange={(page) =>setPage(page)} sx={{display:'flex',justifyContent:'center',mt:1,color:'primary'}}/>
+                <Pagination count={totalPages} page={page} onChange={handlePageChange} sx={{display:'flex',justifyContent:'center',mt:1,color:'primary'}}/>
             </Stack>  
         </Box>
     );
 }
+
+
+
+
+
+
 

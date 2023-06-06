@@ -1,6 +1,6 @@
 const accessoriesData=[
     {
-        id:6,
+        id:0,
         title:"Faux leather ladies side bag",
         price:'Rs 1800',
         image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
@@ -30,77 +30,62 @@ const accessoriesData=[
         price:'Rs 250',
         image:"https://anx.com.np/wp-content/uploads/2021/10/viber_image_2021-10-07_02-07-50-234-600x600.jpg",
         rating:3
-    },{
+    }, {
         id:5,
-        title:"Fauc leather ladies side bag",
-        price:'Rs 1800',
-        image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
+        title:"Unisex baseball cap",
+        price:'Rs 1000',
+        image:"https://anx.com.np/wp-content/uploads/2023/02/image-11.jpg",
         rating:3
-    },{
+    },
+,{
         id:6,
-        title:"Fauc leather ladies side bag",
+        title:"Canvas bag",
         price:'Rs 1800',
-        image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
-        rating:3
-    },{
+        image:"https://anx.com.np/wp-content/uploads/2020/08/IMG-c02ca9121ccea55b9b6700e28e185148-V-300x300.jpg",
+        rating:4
+    }, {
         id:7,
-        title:"Fauc leather ladies side bag",
-        price:'Rs 1800',
-        image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
+        title:"Unisex baseball cap",
+        price:'Rs 1000',
+        image:"https://anx.com.np/wp-content/uploads/2023/02/image-11.jpg",
         rating:3
-    },{
+    },
+    {
         id:8,
-        title:"Fauc leather ladies side bag",
-        price:'Rs 1800',
-        image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
+        title:"Acrylic Matte Hair Claw Clip",
+        price:'Rs 250',
+        image:"https://anx.com.np/wp-content/uploads/2021/10/viber_image_2021-10-07_02-08-49-393-300x300.jpg",
         rating:3
     },{
         id:9,
-        title:"Fauc leather ladies side bag",
+        title:" leather ladies side bag",
         price:'Rs 1800',
         image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
         rating:3
     },{
         id:10,
-        title:"Fauc leather ladies side bag",
+        title:"Necklace for women",
         price:'Rs 1800',
-        image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
-        rating:3
+        image:"https://anx.com.np/wp-content/uploads/2021/11/254351925_906213410016585_3352934799928256892_n-300x300.jpg",
+        rating:4
     },{
         id:11,
-        title:"Fauc leather ladies side bag",
+        title:"Canvas bag",
         price:'Rs 1800',
-        image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
-        rating:3
-    },{
-        id:6,
-        title:"Fauc leather ladies side bag",
-        price:'Rs 1800',
-        image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
-        rating:3
-    },{
+        image:"https://anx.com.np/wp-content/uploads/2020/08/IMG-c02ca9121ccea55b9b6700e28e185148-V-300x300.jpg",
+        rating:4
+    },,{
         id:12,
-        title:"Fauc leather ladies side bag",
+        title:"Faux leather ladies side bag",
         price:'Rs 1800',
         image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
         rating:3
-    },{
+    },
+    {
         id:13,
-        title:"Fauc leather ladies side bag",
-        price:'Rs 1800',
-        image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
-        rating:3
-    },{
-        id:14,
-        title:"Fauc leather ladies side bag",
-        price:'Rs 1800',
-        image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
-        rating:3
-    },{
-        id:15,
-        title:"Fauc leather ladies side bag",
-        price:'Rs 1800',
-        image:"https://anx.com.np/wp-content/uploads/2020/02/69A1433-300x300.jpg",
+        title:"Unisex baseball cap",
+        price:'Rs 1000',
+        image:"https://anx.com.np/wp-content/uploads/2023/02/image-11.jpg",
         rating:3
     },
 ]
