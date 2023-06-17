@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import accessoriesData from './accessoriesData';
-import { Box, Card,IconButton, CardActions, CardContent, CardMedia, Grid, Pagination,Button,Rating, Typography } from '@mui/material';
+import { accessoriesData } from '../Data/data';
+import { Box, Card, CardContent, CardMedia, Grid, Pagination,Rating, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Link } from 'react-router-dom';
 
-export default function Accessories({onAddToCart}) {
+export default function Accessories() {
    
     const [page, setPage] = useState(1);
   
@@ -22,6 +22,8 @@ export default function Accessories({onAddToCart}) {
     const acceCards = currentCards.map(
         accessories => (
             <Grid item xs={12} sm={6} md={3} key={accessories.id} sx={{mt:4}}>
+                <Link to={`/productdetail/${accessories.id}`} style={{textDecoration:'none'}}>
+                
                 <Card>
                     <CardMedia
                         component="img"
@@ -35,15 +37,8 @@ export default function Accessories({onAddToCart}) {
                         <Typography>{accessories.price}</Typography>
                         <Rating size='small' defaultValue={accessories.rating} readOnly/>
                     </CardContent>
-                    <CardActions sx={{display:'flex',justifyContent:'space-between'}}>
-                        <Button size='small' variant='contained' onClick={onAddToCart}>
-                            Add to cart
-                        </Button>
-                        <IconButton sx={{color:'inherit'}}>
-                 <FavoriteIcon />
-                        </IconButton>
-                    </CardActions>
                 </Card>
+                </Link>
             </Grid>
         )
     );

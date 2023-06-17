@@ -1,11 +1,11 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, IconButton, Pagination, Rating, Typography } from '@mui/material';
+import { Button, Card, CardContent, CardMedia, Grid, Pagination, Rating, Typography } from '@mui/material';
 import { Box, Stack } from '@mui/system';
 import React, { useState } from 'react'
-import womensData from './womensData'
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import { womensData } from '../Data/data';
+import { Link } from 'react-router-dom';
 
 
-export default function Womens({onAddToCart}) {
+export default function Womens() {
     const [womens, setWomens] = useState("Tshirts and Tops");
     const [page, setPage] = useState(1);
     const womensCategories = ["Jeans", "Shoes", "Skirts", "dresses", "Jumpsuits and Joggers", "Tshirts and Tops"];
@@ -30,6 +30,7 @@ export default function Womens({onAddToCart}) {
     const womensCards = womensFilteredCards.map(
         womens => (
             <Grid item xs={12} sm={6} md={3} key={womens.id}>
+                <Link to={`/productdetail/${womens.id}`} style={{textDecoration:'none'}}>
                 <Card>
                     <CardMedia
                         component="img"
@@ -43,16 +44,8 @@ export default function Womens({onAddToCart}) {
                         <Typography>{womens.price}</Typography>
                         <Rating size='small' defaultValue={womens.rating} readOnly/>
                     </CardContent>
-                    <CardActions  sx={{display: 'flex',justifyContent:'space-between'}}>
-                        <Button size='small' variant='contained' onClick={onAddToCart}>
-                            Add to cart
-                        </Button>
-                              <IconButton sx={{color:'inherit'}}>
-                 <FavoriteIcon />
-                        </IconButton>
-                     
-                    </CardActions>
                 </Card>
+                </Link>
             </Grid>
         )
     );

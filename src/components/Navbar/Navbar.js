@@ -94,11 +94,13 @@ export default function Navbar({ count }) {
             mt: 2,
           }}
         >
+          <Link to='/cart' style={{textDecoration:'none',color:'inherit'}}>
           <IconButton color="inherit">
             <Badge color="warning" badgeContent={count}>
               <ShoppingCartIcon />
             </Badge>
           </IconButton>
+          </Link>
 
           <IconButton color="inherit">
             <Badge badgeContent="0" color="warning" className="mailicon">

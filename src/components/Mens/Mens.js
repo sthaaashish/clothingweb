@@ -1,11 +1,11 @@
-import { Button, Card, IconButton,CardActions, CardContent,useTheme, CardMedia, Grid, Rating, Typography, Stack, Pagination, useMediaQuery } from '@mui/material';
+import { Button, Card, CardContent, CardMedia, Grid, Rating, Typography, Stack, Pagination } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState } from 'react'
-import mensData from './mensData'
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import { mensData } from '../Data/data';
+import { Link } from 'react-router-dom';
 
 
-export default function Mens({onAddToCart}) {
+export default function Mens() {
   const [mens, setMens] = useState("Jeans");
   const mensCategory = ["Jeans", "Tshirts and Tank-Tops", "Shoes", "Shirts and Blazers", "Jackets and Sweaters"]
   const [page, setpage] = useState(1);
@@ -27,6 +27,8 @@ export default function Mens({onAddToCart}) {
 
   const cards = mensFilteredCards.map(mens => (
     <Grid item xs={12} sm={6} md={3} key={mens.id}>
+      <Link to={`/productdetail/${mens.id}`}  style={{textDecoration:'none'}}>
+     
       <Card>
         <CardMedia component="img"
           height="500"
@@ -37,16 +39,10 @@ export default function Mens({onAddToCart}) {
         <CardContent>
           <Typography variant='h7'>{mens.title}</Typography>
           <Typography>{mens.price}</Typography>
-          <Rating size='small' defaultValue={mens.Rating} readOnly />
-
+          <Rating size='small' defaultValue={mens.rating} readOnly />
         </CardContent>
-        <CardActions sx={{display:'flex', justifyContent:'space-between'}}>
-          <Button size="small" variant="contained" onClick={onAddToCart}>Add to cart</Button>
-          <IconButton sx={{color:'inherit'}}>
-                 <FavoriteIcon />
-                        </IconButton>
-        </CardActions>
       </Card>
+      </Link>
     </Grid>
   ))
 
